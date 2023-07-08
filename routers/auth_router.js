@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 import { login, register } from '../controllers/auth_controller.js';
 import { validateResultExpress } from '../middlewares/validateResultExpress.js';
 import {body} from "express-validator"
@@ -34,5 +34,5 @@ router.post('/login', [
     validateResultExpress, 
     login);
 
-
 export default router;
+*/

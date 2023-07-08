@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/*import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const {Schema, model} = mongoose;
@@ -22,4 +22,22 @@ const userSchema = new Schema({
     }
 });
 
-export const User = model('user', userSchema);
+userSchema.pre("save", async function(next){
+   const user = this;
+
+   //metodo para actualizar la contraseña del usuario
+
+   if (!user.isModified('password')) return next();
+
+    try {
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(user.password, salt);
+        next();
+    } catch (error) {
+        console.log(error);
+        throw new Error("falló el hash de la contraseña")
+    }
+});
+
+export const User = model('User', userSchema);
+*/

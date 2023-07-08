@@ -1,10 +1,21 @@
-import mongoose from "mongoose";
+import Sequelize from "sequelize";
 
-try {
-  await mongoose.connect(process.env.URI_MONGO);
-  console.log("conexion exitosa👌");
-} catch (error) {
-nsole.log("error de conexion:" +error);
+export const sequelize = new Sequelize(`${process.env.DB_NAME}`,`${process.env.DB_USER}`,`${process.env.DB_PASSWORD}`,{
+  host: `${process.env.DB_HOST}`,
+  dialect: `${process.env.DB_DIALECT}`
 }
+);
+/*
+export const sequelize = new Sequelize("eccomerce","postgres","horitas65",{
+  host: "localhost",
+  dialect: "postgres"
+}
+);
+*/
+
+
+
+
+
 
 
