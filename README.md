@@ -1,1 +1,1 @@
-#Eccomerce backend utilizando nodeJS y express, mongoose
+#Eccomerce backend utilizando nodeJS y express, ORM sequelize
